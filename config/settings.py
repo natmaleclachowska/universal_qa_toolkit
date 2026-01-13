@@ -1,1 +1,1 @@
-BASE_url = "https://www.automationexercise.com/"
+BASE_URL = "https://www.automationexercise.com/"
