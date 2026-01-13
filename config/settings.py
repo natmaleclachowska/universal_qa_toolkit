@@ -1,0 +1,1 @@
+BASE_url = "https://www.automationexercise.com/"
