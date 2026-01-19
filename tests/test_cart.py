@@ -27,8 +27,3 @@ def test_add_product_to_cart_from_details(page):
     page.locator("//button[contains(@class, 'cart')]").click()
     page.locator("//u[text()='View Cart']").click()
     expect(product_in_cart).to_be_visible()
-
-    import re
-    import pytest
-    from playwright.sync_api import expect
-    from config.settings import BASE_URL
