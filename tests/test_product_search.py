@@ -8,7 +8,7 @@ from playwright.sync_api import expect
 from config.settings import BASE_URL
 
 def test_search_button(page):
-    page.goto(BASE_URL)
+    page.goto(BASE1_URL)
 
     # Test 1. Wyszukiwanie z kliknięciem przycisku
     page.locator("//a[contains(text(), 'Products')]").click(force=True)
@@ -21,7 +21,7 @@ def test_search_button(page):
     print(f"\nTest 1: Znaleziono {count} produktów.")
 
 def test_search_no_results(page):
-    page.goto(BASE_URL)
+    page.goto(BASE1_URL)
 
     # Test 2. Wyszukiwanie frazy, która nie istnieje (negatywny)
     page.locator("//a[contains(text(), 'Products')]").click(force=True)
@@ -33,7 +33,7 @@ def test_search_no_results(page):
     print(f"\nTest 3: Znaleziono {count} produktów dla nieistniejącej frazy.")
 
 def test_search_case_insensitive(page):
-    page.goto(BASE_URL)
+    page.goto(BASE1_URL)
 
     # Test 3. Wyszukiwanie z wielkimi literami (Case Insensitive)
     page.locator("//a[contains(text(), 'Products')]").click(force=True)

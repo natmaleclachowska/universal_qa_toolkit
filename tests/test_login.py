@@ -1,3 +1,7 @@
+'''
+TESTY FORMULARZA LOGOWANIA
+'''
+
 import pytest
 from playwright.sync_api import expect
 from config.settings import LOGIN_URL
