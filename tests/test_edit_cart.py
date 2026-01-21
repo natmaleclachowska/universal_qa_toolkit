@@ -30,8 +30,9 @@ def test_remove_product_from_cart(page):
     page.locator(".add_to_cart_button").first.click()
     page.wait_for_timeout(2000)
     page.goto(BASKET2_URL)
+    page.locator(".remove").first.wait_for(state="visible")
     page.locator(".remove").first.click()
-    expect(page.locator(".cart-empty")).to_be_visible()
+    expect(page.locator(".cart-empty")).to_contain_text("pusty")
     print("Test 2: Usuwanie produktu z koszyka działa poprawnie")
 
 
