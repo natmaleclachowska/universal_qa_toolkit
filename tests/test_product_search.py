@@ -5,7 +5,7 @@ TESTY WYSZUKIWARKI WEWNĘTRZNEJ
 import re
 import pytest
 from playwright.sync_api import expect
-from config.settings import BASE_URL
+from config.settings import BASE1_URL
 
 def test_search_button(page):
     page.goto(BASE1_URL)
